@@ -8,7 +8,7 @@ class DB {
 
   add(todo) {
     if (!todo.key) todo.key = this.getRandomKey();
-    let db = this.toArray();
+    let db = this.toArray() || [];
     db.push(todo); 
     database.set(db);
   }

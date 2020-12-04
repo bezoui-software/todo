@@ -1,0 +1,124 @@
+main {
+  overflow-x: hidden;
+}
+
+#new-todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  padding: 20px;
+}
+
+#new-todo-input {
+  flex: 1;
+  padding: 20px;
+  border-radius: 15px 0 0 15px;
+}
+
+#new-todo-button {
+  padding: 16px 0;
+  border-radius: 0 15px 15px 0;
+  min-width: fit-content;
+  width: 40px;
+  height: fit-content;
+  box-shadow: 3px 0 8px var(--transparent-black);
+}
+
+#new-todo-button:active {
+  transform: scale(1);
+}
+
+button,
+.todo-container {
+  border-radius: 15px;
+}
+
+#todos-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 8px var(--transparent-black);
+  gap: 5px;
+  transition: 0.3s all ease;
+  padding: 10px;
+}
+
+.todo-container #todo-value {
+  font-size: 15px;
+  font-weight: 500;
+  flex: 1;
+}
+
+.todo-container .todo-button {
+  background: white;
+  color: var(--blue);
+  min-width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.completed {
+  opacity: 0.7;
+  box-shadow: 0 0 4px var(--transparent-black);
+}
+
+.completed #todo-value {
+  -webkit-text-decoration-line: line-through;
+  text-decoration-line: line-through;
+  opacity: 0.5;
+}
+
+.todo-fadeout {
+  animation: todo-fadeout 0.3s ease forwards
+}
+
+@keyframes todo-fadeout {
+  from {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, 0) rotate(0deg);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  main {
+    padding: 20px 0px;
+  }
+
+  #new-todo-container {
+    position: fixed;
+    bottom: 20px;
+    top: auto;
+    width: 100%;
+    z-index: 999;
+  }
+
+  #todos-container {
+    margin-bottom: 100px;
+  }
+
+  button:hover {
+    filter: brightness(1);
+  }
+
+  button:active {
+    transform: scale(0.8);
+    filter: brightness(0.9);
+  }
+}

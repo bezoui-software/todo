@@ -1,3 +1,7 @@
+* {
+  transition: 0.3s;
+}
+
 main {
   overflow-x: hidden;
 }
@@ -122,15 +126,16 @@ button,
     filter: brightness(0.9);
   }
 
-  .todo-container {
-    box-shadow: 0 0 4px var(--dark-transparent-black);
-  }
-
+  .todo-container,
   input {
-    box-shadow: 0 0px 4px var(--dark-transparent-black);
+    border: 1px solid var(--transparent-black);
   }
 
-  #new-todo-button {
-    box-shadow: 3px 0px 4px var(--dark-transparent-black);
+  input:focus {
+    border: 1px solid black;
+  }
+
+  input:focus ~ #new-todo-button {
+    border: 1px solid black;
   }
 }

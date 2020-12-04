@@ -121,4 +121,16 @@ button,
     transform: scale(0.8);
     filter: brightness(0.9);
   }
+
+  .todo-container {
+    box-shadow: 0 0 4px var(--dark-transparent-black);
+  }
+
+  input {
+    box-shadow: 0 0px 4px var(--dark-transparent-black);
+  }
+
+  #new-todo-button {
+    box-shadow: 3px 0px 4px var(--dark-transparent-black);
+  }
 }

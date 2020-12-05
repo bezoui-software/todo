@@ -8,10 +8,28 @@ const TODO_DB_KEY = 'TODO-LIST';
 const TODO_FADE_OUT_CLASSNAME = 'todo-fadeout';
 
 function setup() {
+  setupServiceWorker();
   setupDoms();
   setupEvents();
+  setupDatabase();
+  setupTodos();
+}
+
+function setupServiceWorker() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  }
+}
+
+function setupDatabase() {
   database = new DB();
+}
+
+function setupTodos() {
   todos = new Todos();
   todos.display();
 }
-

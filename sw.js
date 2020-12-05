@@ -1,6 +1,6 @@
 var CACHE_NAME = 'todo-v1';
 var urlsToCache = [
-  '/todo',
+  '/todo/',
   '/css/theme/theme.css',
   '/css/index.css',
   '/js/main.js',

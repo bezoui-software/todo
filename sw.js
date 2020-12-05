@@ -1,14 +1,14 @@
 var CACHE_NAME = 'todo-v1';
 var urlsToCache = [
-  '/',
-  '/css/theme/theme.css',
-  '/css/index.css',
-  '/js/main.js',
-  '/js/todos.js',
-  '/js/todo.js',
-  '/js/events.js',
-  '/js/doms.js',
-  '/js/database.js',
+  '/todo',
+  '/todo/css/theme/theme.css',
+  '/todo/css/index.css',
+  '/todo/js/main.js',
+  '/todo/js/todos.js',
+  '/todo/js/todo.js',
+  '/todo/js/events.js',
+  '/todo/js/doms.js',
+  '/todo/js/database.js',
 ];
 
 self.addEventListener('install', function(event) {

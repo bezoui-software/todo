@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons&display=swap');
 
 :root{
   --transparent-black: rgba(0, 0, 0, 0.09);
@@ -15,12 +15,20 @@
   --blue: #5061ff;
 }
 
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  font-display: swap;
+}
+
 html {
   scroll-behavior: smooth;
+  font-family: 'Roboto', Fallback, sans-serif;
 }
 
 *{
-  font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
 }
 

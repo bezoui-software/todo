@@ -1,4 +1,4 @@
-var CACHE_NAME = 'todo-v2';
+var CACHE_NAME = 'todo-v1';
 car CACHE_URLS = [
   '/todo/',
   '/todo/index.html',

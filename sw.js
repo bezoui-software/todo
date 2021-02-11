@@ -1,5 +1,5 @@
 var CACHE_NAME = 'todo-v1';
-car CACHE_URLS = [
+var CACHE_URLS = [
   '/todo/',
   '/todo/index.html',
   '/todo/css/theme/theme.css',

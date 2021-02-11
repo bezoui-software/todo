@@ -21,7 +21,9 @@ class DB {
   getIndex(todo) {
     const db = this.toArray();
     for (let i=0; i<db.length; i++) {
-      if (db[i].key == todo.key) return i;
+      if (db[i].key === todo.key) {
+        return i;
+      }
     }
   }
 
@@ -40,7 +42,7 @@ class DB {
 
   remove(todo) {
     let db = this.toArray();
-    const index = this.getIndex(todo.key);
+    const index = this.getIndex(todo);
     db.splice(index, 1);
     this.set(db);
   }
